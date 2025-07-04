@@ -1,0 +1,994 @@
+#!/usr/bin/env python3
+"""
+Main Playout Tab - Integration Component
+Enhanced Playout tab that integrates all components into a cohesive interface
+"""
+
+from pathlib import Path
+from PyQt6.QtWidgets import *
+from PyQt6.QtCore import Qt, pyqtSignal, QTimer
+
+# Import all playout components
+try:
+    from .playout_video_player import EnhancedVideoPlayer, VLC_AVAILABLE
+    from .playout_audio_control import EnhancedAudioControlPanel, AUDIO_SYSTEM_AVAILABLE
+    from .playout_amcp_server import AMCPServerControl
+    from .playout_amcp_console import AMCPConsoleDialog
+    from .playout_activity_log import ActivityLogComponent
+except ImportError:
+    # Fallback for direct execution
+    from playout_video_player import EnhancedVideoPlayer, VLC_AVAILABLE
+    from playout_audio_control import EnhancedAudioControlPanel, AUDIO_SYSTEM_AVAILABLE
+    from playout_amcp_server import AMCPServerControl
+    from playout_amcp_console import AMCPConsoleDialog
+    from playout_activity_log import ActivityLogComponent
+
+# Fallback imports for missing dependencies
+try:
+    from core.logging import get_logger
+except ImportError:
+    import logging
+    def get_logger(name):
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        return logging.getLogger(name)
+
+
+class PlayoutTab(QWidget):
+    """Enhanced Playout tab with complete audio and video control features"""
+    
+    # Signals for external communication
+    status_message = pyqtSignal(str, int)
+    media_taken_to_air = pyqtSignal(str)
+    audio_profile_changed = pyqtSignal(str)
+    
+    def __init__(self, config_manager, casparcg_client=None, audio_system=None, parent=None):
+        super().__init__(parent)
+        self.logger = get_logger(self.__class__.__name__)
+        self.config_manager = config_manager
+        self.casparcg_client = casparcg_client
+        self.audio_system = audio_system
+        
+        # Component references
+        self.preview_player = None
+        self.program_player = None
+        self.audio_control_panel = None
+        self.amcp_server_control = None
+        self.activity_log = None
+        
+        # State tracking
+        self.is_on_air = False
+        self.auto_audio_enabled = True
+        
+        self.init_ui()
+        self._apply_professional_styling()
+        self._setup_connections()
+        self._initialize_system()
+    
+    def init_ui(self):
+        """Initialize UI exactly like the screenshot"""
+        main_layout = QVBoxLayout(self)
+        main_layout.setSpacing(8)
+        main_layout.setContentsMargins(8, 8, 8, 8)
+        
+        # ========================
+        # 1. TOP: AMCP SERVER CONTROL
+        # ========================
+        self.amcp_server_control = AMCPServerControl(self.casparcg_client)
+        main_layout.addWidget(self.amcp_server_control)
+        
+        # ========================
+        # 2. MAIN: HORIZONTAL LAYOUT (Players left, Audio right)
+        # ========================
+        main_content = QHBoxLayout()
+        main_content.setSpacing(12)
+        
+        # Left side: Players section
+        players_widget = self._create_players_section()
+        main_content.addWidget(players_widget)
+        
+        # Right side: Audio control
+        audio_widget = self._create_audio_section()
+        main_content.addWidget(audio_widget)
+        
+        # Set proportions: Players get ~70%, Audio gets ~30%
+        players_widget.setMinimumWidth(900)
+        audio_widget.setFixedWidth(400)
+        
+        main_layout.addLayout(main_content)
+        
+        # ========================
+        # 3. BOTTOM: LOG SECTION
+        # ========================
+        self.activity_log = ActivityLogComponent()
+        main_layout.addWidget(self.activity_log)
+        
+        # Set stretch factors
+        main_layout.setStretchFactor(self.amcp_server_control, 0)  # Fixed height
+        main_layout.setStretchFactor(main_content, 1)              # Expandable
+        main_layout.setStretchFactor(self.activity_log, 0)         # Fixed height
+    
+    def _create_players_section(self):
+        """Create players section (left side)"""
+        widget = QWidget()
+        layout = QVBoxLayout(widget)
+        layout.setSpacing(12)
+        layout.setContentsMargins(0, 0, 0, 0)
+        
+        # Main players layout: Preview | Transport | Program
+        players_layout = QHBoxLayout()
+        players_layout.setSpacing(15)
+        
+        # ========================
+        # PREVIEW PLAYER
+        # ========================
+        preview_container = QWidget()
+        preview_container.setFixedWidth(380)
+        preview_layout = QVBoxLayout(preview_container)
+        preview_layout.setContentsMargins(0, 0, 0, 0)
+        preview_layout.setSpacing(0)
+        
+        # Preview header
+        preview_header = QLabel("🎬 PREVIEW")
+        preview_header.setFixedHeight(35)
+        preview_header.setStyleSheet("""
+            QLabel {
+                background-color: #2196F3;
+                color: white;
+                padding: 8px;
+                font-weight: bold;
+                font-size: 14px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+        """)
+        preview_header.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        preview_layout.addWidget(preview_header)
+        
+        # Preview player
+        self.preview_player = EnhancedVideoPlayer("Preview Player")
+        self.preview_player.setStyleSheet("""
+            EnhancedVideoPlayer {
+                border-left: 2px solid #2196F3;
+                border-right: 2px solid #2196F3;
+                border-bottom: 2px solid #2196F3;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
+        """)
+        preview_layout.addWidget(self.preview_player)
+        
+        # Preview controls
+        preview_controls = QWidget()
+        preview_controls.setFixedHeight(50)
+        preview_controls_layout = QHBoxLayout(preview_controls)
+        preview_controls_layout.setContentsMargins(8, 8, 8, 8)
+        
+        cue_btn = QPushButton("🎯 CUE")
+        cue_btn.setFixedSize(70, 30)
+        cue_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #FF9800;
+                color: white;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+        """)
+        cue_btn.clicked.connect(self._cue_preview)
+        preview_controls_layout.addWidget(cue_btn)
+        
+        self.auto_audio_btn = QPushButton("🎵 Auto Audio")
+        self.auto_audio_btn.setCheckable(True)
+        self.auto_audio_btn.setChecked(True)
+        self.auto_audio_btn.setFixedSize(100, 30)
+        self.auto_audio_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #4CAF50;
+                color: white;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+            QPushButton:!checked {
+                background-color: #757575;
+            }
+        """)
+        self.auto_audio_btn.toggled.connect(self._toggle_auto_audio)
+        preview_controls_layout.addWidget(self.auto_audio_btn)
+        
+        library_btn = QPushButton("📚 Library")
+        library_btn.setFixedSize(70, 30)
+        library_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #9C27B0;
+                color: white;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+        """)
+        library_btn.clicked.connect(self._open_media_library)
+        preview_controls_layout.addWidget(library_btn)
+        
+        preview_controls_layout.addStretch()
+        preview_layout.addWidget(preview_controls)
+        
+        players_layout.addWidget(preview_container)
+        
+        # ========================
+        # CENTER TRANSPORT CONTROLS
+        # ========================
+        center_container = QWidget()
+        center_container.setFixedWidth(120)
+        center_layout = QVBoxLayout(center_container)
+        center_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        center_layout.setSpacing(10)
+        
+        center_layout.addStretch(1)
+        
+        # Send to Program
+        send_btn = QPushButton("➡️\nSEND TO\nPROGRAM")
+        send_btn.setFixedSize(100, 70)
+        send_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #2196F3;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                border-radius: 8px;
+                border: 2px solid #1976D2;
+            }
+            QPushButton:hover {
+                background-color: #1976D2;
+            }
+        """)
+        send_btn.clicked.connect(self._send_to_program)
+        center_layout.addWidget(send_btn)
+        
+        # TAKE TO AIR (main button)
+        take_btn = QPushButton("📺\nTAKE TO\nAIR")
+        take_btn.setFixedSize(100, 80)
+        take_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #E91E63;
+                color: white;
+                font-size: 11px;
+                font-weight: bold;
+                border-radius: 10px;
+                border: 3px solid #AD1457;
+            }
+            QPushButton:hover {
+                background-color: #C2185B;
+            }
+        """)
+        take_btn.clicked.connect(self._take_to_air)
+        center_layout.addWidget(take_btn)
+        
+        # FADE and CUT buttons
+        fade_cut_layout = QHBoxLayout()
+        fade_cut_layout.setSpacing(5)
+        
+        fade_btn = QPushButton("🌅\nFADE")
+        fade_btn.setFixedSize(45, 50)
+        fade_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #9C27B0;
+                color: white;
+                font-size: 9px;
+                font-weight: bold;
+                border-radius: 6px;
+            }
+        """)
+        fade_btn.clicked.connect(lambda: self._fade_program(fade=True))
+        fade_cut_layout.addWidget(fade_btn)
+        
+        cut_btn = QPushButton("✂️\nCUT")
+        cut_btn.setFixedSize(45, 50)
+        cut_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #FF5722;
+                color: white;
+                font-size: 9px;
+                font-weight: bold;
+                border-radius: 6px;
+            }
+        """)
+        cut_btn.clicked.connect(lambda: self._fade_program(fade=False))
+        fade_cut_layout.addWidget(cut_btn)
+        
+        center_layout.addLayout(fade_cut_layout)
+        center_layout.addStretch(1)
+        
+        players_layout.addWidget(center_container)
+        
+        # ========================
+        # PROGRAM PLAYER
+        # ========================
+        program_container = QWidget()
+        program_container.setFixedWidth(380)
+        program_layout = QVBoxLayout(program_container)
+        program_layout.setContentsMargins(0, 0, 0, 0)
+        program_layout.setSpacing(0)
+        
+        # Program header
+        program_header = QLabel("📺 PROGRAM")
+        program_header.setFixedHeight(35)
+        program_header.setStyleSheet("""
+            QLabel {
+                background-color: #F44336;
+                color: white;
+                padding: 8px;
+                font-weight: bold;
+                font-size: 14px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+        """)
+        program_header.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        program_layout.addWidget(program_header)
+        
+        # Program player
+        self.program_player = EnhancedVideoPlayer("Program Player")
+        self.program_player.setStyleSheet("""
+            EnhancedVideoPlayer {
+                border-left: 2px solid #F44336;
+                border-right: 2px solid #F44336;
+                border-bottom: 2px solid #F44336;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
+        """)
+        program_layout.addWidget(self.program_player)
+        
+        # Program status
+        program_status = QWidget()
+        program_status.setFixedHeight(50)
+        program_status_layout = QHBoxLayout(program_status)
+        program_status_layout.setContentsMargins(8, 8, 8, 8)
+        
+        # LIVE AUDIO indicator
+        live_audio_btn = QPushButton("🔴 LIVE AUDIO")
+        live_audio_btn.setFixedSize(100, 30)
+        live_audio_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #F44336;
+                color: white;
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 10px;
+            }
+        """)
+        program_status_layout.addWidget(live_audio_btn)
+        
+        program_status_layout.addStretch()
+        
+        # ON AIR indicator
+        self.on_air_label = QLabel("🔴 OFF AIR")
+        self.on_air_label.setFixedSize(80, 30)
+        self.on_air_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.on_air_label.setStyleSheet("""
+            QLabel {
+                background-color: #757575;
+                color: white;
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 10px;
+            }
+        """)
+        program_status_layout.addWidget(self.on_air_label)
+        
+        program_layout.addWidget(program_status)
+        
+        players_layout.addWidget(program_container)
+        
+        layout.addLayout(players_layout)
+        
+        return widget
+    
+    def _create_audio_section(self):
+        """Create audio section (right side)"""
+        widget = QWidget()
+        widget.setFixedWidth(400)
+        layout = QVBoxLayout(widget)
+        layout.setSpacing(12)
+        layout.setContentsMargins(8, 0, 0, 0)
+        
+        # Enhanced audio control panel
+        self.audio_control_panel = EnhancedAudioControlPanel(
+            self.audio_system, 
+            self.config_manager
+        )
+        layout.addWidget(self.audio_control_panel)
+        
+        layout.addStretch()
+        return widget
+    
+    def _setup_connections(self):
+        """Setup signal connections between components"""
+        try:
+            # Audio control panel connections
+            if self.audio_control_panel:
+                self.audio_control_panel.profile_changed.connect(self._on_audio_profile_changed)
+                self.audio_control_panel.night_mode_toggled.connect(self._on_night_mode_changed)
+                self.audio_control_panel.parameter_changed.connect(self._on_audio_parameter_changed)
+            
+            # Video player connections
+            if self.preview_player:
+                self.preview_player.media_loaded.connect(self._on_preview_media_loaded)
+                self.preview_player.playback_state_changed.connect(self._on_preview_state_changed)
+            
+            if self.program_player:
+                self.program_player.media_loaded.connect(self._on_program_media_loaded)
+                self.program_player.playback_state_changed.connect(self._on_program_state_changed)
+            
+            # AMCP server control connections
+            if self.amcp_server_control:
+                self.amcp_server_control.amcp_command_sent.connect(self._on_amcp_command_sent)
+                self.amcp_server_control.connection_status_changed.connect(self._on_amcp_connection_changed)
+                self.amcp_server_control.media_list_updated.connect(self._on_media_list_updated)
+            
+            # Activity log connections
+            if self.activity_log:
+                self.activity_log.log_message_added.connect(self._on_log_message_added)
+            
+            self.logger.info("Signal connections established")
+            
+        except Exception as e:
+            self.logger.error(f"Failed to setup connections: {e}")
+    
+    def _apply_professional_styling(self):
+        """Apply professional broadcast styling"""
+        self.setStyleSheet("""
+            /* Main widget styling */
+            QWidget {
+                background-color: #2b2b2b;
+                color: #E0E0E0;
+                font-family: 'Segoe UI', Arial, sans-serif;
+                font-size: 11px;
+            }
+            
+            /* Button styling */
+            QPushButton {
+                background-color: #404040;
+                border: 1px solid #666;
+                border-radius: 4px;
+                padding: 4px 8px;
+                color: #E0E0E0;
+                font-weight: bold;
+                font-size: 10px;
+            }
+            
+            QPushButton:hover {
+                background-color: #4a4a4a;
+                border-color: #00BCD4;
+            }
+            
+            QPushButton:pressed {
+                background-color: #353535;
+            }
+            
+            QPushButton:checked {
+                background-color: #00BCD4;
+                border-color: #00ACC1;
+                color: white;
+            }
+            
+            QPushButton:disabled {
+                background-color: #2a2a2a;
+                border-color: #333;
+                color: #666;
+            }
+            
+            /* Labels */
+            QLabel {
+                color: #E0E0E0;
+                font-size: 11px;
+            }
+        """)
+    
+    def _initialize_system(self):
+        """Initialize the playout system"""
+        self.activity_log.add_system_event("Enhanced Playout System initialized")
+        self.activity_log.add_system_event(f"VLC Available: {'Yes' if VLC_AVAILABLE else 'No'}")
+        self.activity_log.add_system_event(f"Audio System Available: {'Yes' if AUDIO_SYSTEM_AVAILABLE else 'No'}")
+        self.activity_log.add_system_event("Ready for broadcast operations")
+    
+    # ========================
+    # VIDEO PLAYER CONTROL METHODS
+    # ========================
+    
+    def _cue_preview(self):
+        """Cue preview to first frame"""
+        if self.preview_player.current_media_path:
+            # Pause at first frame
+            self.preview_player.stop()
+            self.preview_player.play()
+            QTimer.singleShot(100, self.preview_player.pause)  # Pause after brief play
+            self.activity_log.add_system_event("Preview cued to first frame")
+        else:
+            self.activity_log.add_warning("No media in preview to cue")
+    
+    def _send_to_program(self):
+        """Send preview content to program player"""
+        preview_file = self.preview_player.get_current_file()
+        if preview_file:
+            # Load same media to program
+            if self.program_player.load_media(preview_file):
+                # If auto audio is enabled, sync audio profile
+                if self.auto_audio_enabled:
+                    self._sync_audio_to_content(preview_file)
+                
+                self.activity_log.add_success(f"Media sent to program: {Path(preview_file).name}")
+                
+                # Update AMCP media combo
+                if self.amcp_server_control:
+                    self.amcp_server_control.set_media(Path(preview_file).name)
+            else:
+                self.activity_log.add_error("Failed to send media to program")
+        else:
+            self.activity_log.add_warning("No media in preview to send")
+    
+    def _take_to_air(self):
+        """Take program content to air"""
+        program_file = self.program_player.get_current_file()
+        if program_file:
+            # Update ON AIR status
+            self.is_on_air = True
+            self._update_on_air_status(True)
+            
+            # Start program playback if not already playing
+            if not self.program_player.is_playing:
+                self.program_player.play()
+            
+            # Send AMCP PLAY command if connected
+            if self.amcp_server_control and self.amcp_server_control.is_connected():
+                media_name = Path(program_file).name
+                self.amcp_server_control.set_media(media_name)
+                self.amcp_server_control.send_custom_command("PLAY")
+            
+            # Emit signal for other components
+            self.media_taken_to_air.emit(program_file)
+            
+            self.activity_log.add_success(f"TAKEN TO AIR: {Path(program_file).name}")
+        else:
+            self.activity_log.add_warning("No program content to take to air")
+    
+    def _fade_program(self, fade=True):
+        """Fade or cut program off air"""
+        if self.is_on_air:
+            # Update OFF AIR status
+            self.is_on_air = False
+            self._update_on_air_status(False)
+            
+            # Stop program playback
+            if fade:
+                # Implement fade logic here (could be gradual volume reduction)
+                self.activity_log.add_system_event("Program FADED off air")
+            else:
+                # Hard cut
+                self.program_player.stop()
+                self.activity_log.add_system_event("Program CUT off air")
+            
+            # Send AMCP STOP command if connected
+            if self.amcp_server_control and self.amcp_server_control.is_connected():
+                self.amcp_server_control.send_custom_command("STOP")
+        else:
+            self.activity_log.add_warning("No program on air to fade")
+    
+    def _update_on_air_status(self, on_air):
+        """Update ON AIR visual indicators"""
+        if on_air:
+            # ON AIR styling
+            self.on_air_label.setText("🔴 ON AIR")
+            self.on_air_label.setStyleSheet("""
+                QLabel {
+                    color: #F44336; 
+                    font-weight: bold; 
+                    padding: 8px 12px;
+                    background-color: rgba(244, 67, 54, 0.2);
+                    border-radius: 6px;
+                    border: 3px solid #F44336;
+                }
+            """)
+        else:
+            # OFF AIR styling
+            self.on_air_label.setText("🔴 OFF AIR")
+            self.on_air_label.setStyleSheet("""
+                QLabel {
+                    color: #757575; 
+                    font-weight: bold; 
+                    padding: 8px 12px;
+                    background-color: rgba(117, 117, 117, 0.1);
+                    border-radius: 6px;
+                    border: 2px solid #757575;
+                }
+            """)
+    
+    def _toggle_auto_audio(self, enabled):
+        """Toggle automatic audio profile detection"""
+        self.auto_audio_enabled = enabled
+        status = "enabled" if enabled else "disabled"
+        self.activity_log.add_system_event(f"Auto audio detection {status}")
+        
+        if enabled and self.program_player.current_media_path:
+            self._sync_audio_to_content(str(self.program_player.current_media_path))
+    
+    def _sync_audio_to_content(self, file_path):
+        """Automatically sync audio profile to content type"""
+        if not self.auto_audio_enabled or not self.audio_control_panel:
+            return
+        
+        try:
+            file_name = Path(file_path).name.lower()
+            
+            # Simple content detection based on filename
+            if any(word in file_name for word in ['movie', 'film', 'cinema']):
+                self.audio_control_panel._apply_preset("movie_mode")
+                self.activity_log.add_audio_event("Auto-detected: Movie content - Applied movie audio profile")
+            elif any(word in file_name for word in ['music', 'song', 'audio']):
+                self.audio_control_panel._apply_preset("music_mode")
+                self.activity_log.add_audio_event("Auto-detected: Music content - Applied music audio profile")
+            elif any(word in file_name for word in ['news', 'report', 'interview']):
+                self.audio_control_panel._apply_preset("news_mode")
+                self.activity_log.add_audio_event("Auto-detected: News content - Applied news audio profile")
+            elif any(word in file_name for word in ['sport', 'game', 'match']):
+                self.audio_control_panel._apply_preset("sports_mode")
+                self.activity_log.add_audio_event("Auto-detected: Sports content - Applied sports audio profile")
+            else:
+                self.audio_control_panel._apply_preset("default")
+                self.activity_log.add_audio_event("Auto-detected: General content - Applied default audio profile")
+                
+        except Exception as e:
+            self.logger.error(f"Failed to sync audio to content: {e}")
+    
+    def _open_media_library(self):
+        """Open media library dialog"""
+        try:
+            # Implementation for media library would go here
+            self.activity_log.add_system_event("Media library opened")
+            
+            # For now, just open a file dialog
+            file_dialog = QFileDialog(self)
+            file_dialog.setFileMode(QFileDialog.FileMode.ExistingFile)
+            file_dialog.setWindowTitle("Select Media File")
+            
+            # Set supported file types
+            video_exts = "*.mp4 *.avi *.mkv *.mov *.flv *.wmv *.webm *.m4v"
+            audio_exts = "*.mp3 *.wav *.flac *.aac *.ogg *.m4a *.wma"
+            all_media = f"{video_exts} {audio_exts}"
+            
+            file_dialog.setNameFilter(f"All Media ({all_media});;Video Files ({video_exts});;Audio Files ({audio_exts})")
+            
+            if file_dialog.exec() == QFileDialog.DialogCode.Accepted:
+                selected_files = file_dialog.selectedFiles()
+                if selected_files and self.preview_player:
+                    self.preview_player.load_media(selected_files[0])
+                    
+        except Exception as e:
+            self.activity_log.add_error(f"Failed to open media library: {e}")
+    
+    # ========================
+    # SIGNAL HANDLERS
+    # ========================
+    
+    def _on_audio_profile_changed(self, profile_name):
+        """Handle audio profile change"""
+        self.activity_log.add_audio_event(f"Audio profile changed to: {profile_name}")
+        self.audio_profile_changed.emit(profile_name)
+    
+    def _on_night_mode_changed(self, enabled):
+        """Handle night mode toggle"""
+        status = "enabled" if enabled else "disabled"
+        self.activity_log.add_audio_event(f"Night mode {status}")
+    
+    def _on_audio_parameter_changed(self, param_name, value):
+        """Handle audio parameter changes"""
+        self.logger.debug(f"Audio parameter {param_name} changed to {value}")
+    
+    def _on_preview_media_loaded(self, file_path):
+        """Handle preview media loaded"""
+        file_name = Path(file_path).name
+        self.activity_log.add_success(f"Preview loaded: {file_name}")
+        
+        # Auto-detect content type if enabled
+        if self.auto_audio_enabled:
+            self._sync_audio_to_content(file_path)
+    
+    def _on_preview_state_changed(self, state):
+        """Handle preview playback state change"""
+        self.logger.debug(f"Preview state: {state}")
+    
+    def _on_program_media_loaded(self, file_path):
+        """Handle program media loaded"""
+        file_name = Path(file_path).name
+        self.activity_log.add_success(f"Program loaded: {file_name}")
+        
+        # Update AMCP media combo
+        if self.amcp_server_control:
+            self.amcp_server_control.set_media(file_name)
+        
+        # Auto-detect content type if enabled
+        if self.auto_audio_enabled:
+            self._sync_audio_to_content(file_path)
+    
+    def _on_program_state_changed(self, state):
+        """Handle program playback state change"""
+        self.logger.debug(f"Program state: {state}")
+        
+        if state == "ended" and self.is_on_air:
+            self.activity_log.add_warning("Program media ended while on air")
+    
+    def _on_amcp_command_sent(self, command):
+        """Handle AMCP command sent"""
+        self.activity_log.add_amcp_command(command)
+    
+    def _on_amcp_connection_changed(self, connected):
+        """Handle AMCP connection status change"""
+        status = "connected" if connected else "disconnected"
+        self.activity_log.add_system_event(f"AMCP server {status}")
+    
+    def _on_media_list_updated(self, media_list):
+        """Handle media list update"""
+        self.activity_log.add_system_event(f"Media list updated: {len(media_list)} files")
+    
+    def _on_log_message_added(self, message, level):
+        """Handle log message added"""
+        # Emit status message for status bar
+        self.status_message.emit(message, 3000)
+    
+    # ========================
+    # PUBLIC INTERFACE METHODS
+    # ========================
+    
+    def get_current_state(self):
+        """Get current playout state"""
+        return {
+            'on_air': self.is_on_air,
+            'auto_audio': self.auto_audio_enabled,
+            'preview': self.preview_player.get_playback_state() if self.preview_player else None,
+            'program': self.program_player.get_playback_state() if self.program_player else None,
+            'amcp_connected': self.amcp_server_control.is_connected() if self.amcp_server_control else False,
+            'audio_settings': self.audio_control_panel.get_current_settings() if self.audio_control_panel else None
+        }
+    
+    def load_preview_media(self, file_path):
+        """Load media to preview player"""
+        if self.preview_player:
+            return self.preview_player.load_media(file_path)
+        return False
+    
+    def load_program_media(self, file_path):
+        """Load media to program player"""
+        if self.program_player:
+            return self.program_player.load_media(file_path)
+        return False
+    
+    def set_audio_profile(self, profile_name):
+        """Set audio profile"""
+        if self.audio_control_panel:
+            self.audio_control_panel._apply_preset(profile_name)
+    
+    def get_audio_control_panel(self):
+        """Get reference to audio control panel"""
+        return self.audio_control_panel
+    
+    def get_amcp_server_control(self):
+        """Get reference to AMCP server control"""
+        return self.amcp_server_control
+    
+    def get_activity_log(self):
+        """Get reference to activity log"""
+        return self.activity_log
+    
+    def get_preview_player(self):
+        """Get reference to preview player"""
+        return self.preview_player
+    
+    def get_program_player(self):
+        """Get reference to program player"""
+        return self.program_player
+    
+    def is_media_on_air(self):
+        """Check if media is currently on air"""
+        return self.is_on_air
+    
+    def emergency_stop(self):
+        """Emergency stop - immediately cut all output"""
+        try:
+            # Stop all players
+            if self.preview_player:
+                self.preview_player.stop()
+            if self.program_player:
+                self.program_player.stop()
+            
+            # Update status
+            self.is_on_air = False
+            self._update_on_air_status(False)
+            
+            # Send AMCP stop
+            if self.amcp_server_control and self.amcp_server_control.is_connected():
+                self.amcp_server_control.send_custom_command("STOP")
+            
+            # Mute audio
+            if self.audio_control_panel:
+                # Emergency mute implementation
+                pass
+            
+            self.activity_log.add_warning("EMERGENCY STOP executed")
+            self.logger.warning("Emergency stop executed")
+            
+        except Exception as e:
+            self.logger.error(f"Error during emergency stop: {e}")
+    
+    def save_state(self):
+        """Save current playout state"""
+        try:
+            state = self.get_current_state()
+            # Save state logic would go here
+            self.activity_log.add_system_event("Playout state saved")
+            return state
+        except Exception as e:
+            self.logger.error(f"Failed to save state: {e}")
+            return None
+    
+    def load_state(self, state):
+        """Load playout state"""
+        try:
+            if not state:
+                return False
+            
+            # Load audio settings
+            if 'audio_settings' in state and self.audio_control_panel:
+                self.audio_control_panel.set_settings(state['audio_settings'])
+            
+            # Load auto audio setting
+            if 'auto_audio' in state:
+                self.auto_audio_enabled = state['auto_audio']
+                self.auto_audio_btn.setChecked(state['auto_audio'])
+            
+            # Load media files if specified
+            if 'preview' in state and state['preview'] and state['preview']['file']:
+                self.load_preview_media(state['preview']['file'])
+            
+            if 'program' in state and state['program'] and state['program']['file']:
+                self.load_program_media(state['program']['file'])
+            
+            self.activity_log.add_system_event("Playout state loaded")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to load state: {e}")
+            return False
+    
+    def get_system_status(self):
+        """Get comprehensive system status"""
+        return {
+            'vlc_available': VLC_AVAILABLE,
+            'audio_system_available': AUDIO_SYSTEM_AVAILABLE,
+            'amcp_connected': self.amcp_server_control.is_connected() if self.amcp_server_control else False,
+            'on_air': self.is_on_air,
+            'preview_loaded': self.preview_player.current_media_path is not None if self.preview_player else False,
+            'program_loaded': self.program_player.current_media_path is not None if self.program_player else False,
+            'auto_audio_enabled': self.auto_audio_enabled,
+            'audio_levels': self.audio_control_panel.get_audio_levels() if self.audio_control_panel else None
+        }
+    
+    def export_configuration(self):
+        """Export current configuration"""
+        try:
+            config = {
+                'playout_state': self.get_current_state(),
+                'system_status': self.get_system_status(),
+                'log_data': self.activity_log.export_log_data() if self.activity_log else None
+            }
+            
+            self.activity_log.add_system_event("Configuration exported")
+            return config
+            
+        except Exception as e:
+            self.logger.error(f"Failed to export configuration: {e}")
+            return None
+    
+    def import_configuration(self, config):
+        """Import configuration"""
+        try:
+            if not config:
+                return False
+            
+            # Import playout state
+            if 'playout_state' in config:
+                self.load_state(config['playout_state'])
+            
+            # Import log data
+            if 'log_data' in config and self.activity_log:
+                self.activity_log.import_log_data(config['log_data'])
+            
+            self.activity_log.add_system_event("Configuration imported")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to import configuration: {e}")
+            return False
+    
+    def cleanup(self):
+        """Clean up resources when closing"""
+        try:
+            # Stop video players
+            if self.preview_player:
+                self.preview_player.stop()
+            
+            if self.program_player:
+                self.program_player.stop()
+            
+            # Clean up audio control panel
+            if self.audio_control_panel:
+                self.audio_control_panel.cleanup()
+            
+            # Disconnect AMCP if connected
+            if self.amcp_server_control and self.amcp_server_control.is_connected():
+                self.amcp_server_control._disconnect_amcp()
+            
+            self.activity_log.add_system_event("Playout system shutdown complete")
+            self.logger.info("Playout tab cleanup completed")
+            
+        except Exception as e:
+            self.logger.error(f"Error during cleanup: {e}")
+
+
+# ========================
+# FACTORY FUNCTION
+# ========================
+
+def create_enhanced_playout_tab(config_manager, casparcg_client=None, audio_system=None):
+    """Factory function to create enhanced playout tab"""
+    return PlayoutTab(config_manager, casparcg_client, audio_system)
+
+
+# ========================
+# CONVENIENCE FUNCTIONS
+# ========================
+
+def create_standalone_playout():
+    """Create standalone playout tab for testing"""
+    class MockConfigManager:
+        def get(self, key, default=None):
+            return default
+        
+        def set(self, key, value):
+            pass
+    
+    return PlayoutTab(MockConfigManager())
+
+
+def validate_media_file(file_path):
+    """Validate if file is supported media"""
+    try:
+        path = Path(file_path)
+        if not path.exists():
+            return False, "File does not exist"
+        
+        ext = path.suffix.lower()
+        video_exts = {'.mp4', '.avi', '.mkv', '.mov', '.flv', '.wmv', '.webm', '.m4v'}
+        audio_exts = {'.mp3', '.wav', '.flac', '.aac', '.ogg', '.m4a', '.wma'}
+        
+        if ext in video_exts.union(audio_exts):
+            return True, "Valid media file"
+        else:
+            return False, f"Unsupported file type: {ext}"
+            
+    except Exception as e:
+        return False, f"Error validating file: {e}"
+
+
+# ========================
+# EXPORTS
+# ========================
+
+__all__ = [
+    'PlayoutTab',
+    'create_enhanced_playout_tab',
+    'create_standalone_playout',
+    'validate_media_file'
+]
+
+# Version info
+__version__ = "2.0.0"
+__author__ = "Enhanced TV Stream Professional"
+__description__ = "Professional broadcast playout interface with complete audio and video control"

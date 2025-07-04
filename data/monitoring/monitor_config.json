@@ -1,0 +1,32 @@
+{
+    "alert_rules": [
+        {
+            "name": "stream_quality_check",
+            "condition": "bitrate < expected_bitrate * 0.8",
+            "action": "quality_adaptive_workflow",
+            "severity": 2
+        },
+        {
+            "name": "audio_silence_check", 
+            "condition": "audio_level < -50",
+            "action": "audio_alert",
+            "severity": 1
+        },
+        {
+            "name": "memory_high_check",
+            "condition": "memory_usage > 90",
+            "action": "cleanup_workflow",
+            "severity": 3
+        }
+    ],
+    "performance_thresholds": {
+        "cpu_warning": 75.0,
+        "cpu_critical": 90.0,
+        "memory_warning": 80.0,
+        "memory_critical": 95.0,
+        "disk_warning": 85.0,
+        "disk_critical": 95.0,
+        "network_latency_warning": 300.0,
+        "network_latency_critical": 1000.0
+    }
+}

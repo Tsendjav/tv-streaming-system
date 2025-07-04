@@ -1,0 +1,45 @@
+﻿{
+    "default_encoder":  "libx264",
+    "servers":  [
+                    {
+                        "url":  "rtmp://192.168.1.50:1935/live",
+                        "id":  "ubuntu_main",
+                        "enabled":  true,
+                        "key":  "main_stream",
+                        "description":  "Primary Ubuntu streaming server",
+                        "type":  "rtmp",
+                        "fps":  "30",
+                        "name":  "Ubuntu Main Server (RTMP)",
+                        "audio_bitrate":  "128",
+                        "video_bitrate":  "2500",
+                        "quality":  "1080p"
+                    },
+                    {
+                        "url":  "rtmp://192.168.1.50:1935/live_720p",
+                        "id":  "ubuntu_720p",
+                        "enabled":  true,
+                        "key":  "hd_stream",
+                        "description":  "720p quality stream",
+                        "type":  "rtmp",
+                        "fps":  "30",
+                        "name":  "Ubuntu 720p Stream",
+                        "audio_bitrate":  "128",
+                        "video_bitrate":  "1200",
+                        "quality":  "720p"
+                    },
+                    {
+                        "url":  "rtmp://192.168.1.50:1935/live_480p",
+                        "id":  "ubuntu_480p",
+                        "enabled":  true,
+                        "key":  "sd_stream",
+                        "description":  "480p quality stream",
+                        "type":  "rtmp",
+                        "fps":  "30",
+                        "name":  "Ubuntu 480p Stream",
+                        "audio_bitrate":  "96",
+                        "video_bitrate":  "600",
+                        "quality":  "480p"
+                    }
+                ],
+    "default_quality":  "720p"
+}

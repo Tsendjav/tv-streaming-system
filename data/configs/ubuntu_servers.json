@@ -1,0 +1,95 @@
+﻿{
+  "servers": [
+    {
+      "id": "ubuntu_main",
+      "name": "Ubuntu Main Server",
+      "host": "192.168.1.50",
+      "rtmp_port": 1935,
+      "http_port": 8080,
+      "type": "nginx-rtmp",
+      "enabled": true,
+      "streams": [
+        {
+          "name": "live",
+          "app": "live",
+          "key": "main_stream",
+          "quality": "1080p",
+          "bitrate": "2500k"
+        },
+        {
+          "name": "live_720p", 
+          "app": "live_720p",
+          "key": "hd_stream",
+          "quality": "720p",
+          "bitrate": "1200k"
+        },
+        {
+          "name": "live_480p",
+          "app": "live_480p", 
+          "key": "sd_stream",
+          "quality": "480p",
+          "bitrate": "600k"
+        }
+      ],
+      "hls_urls": {
+        "main": "http://192.168.1.50:8080/hls/main_stream.m3u8",
+        "720p": "http://192.168.1.50:8080/hls/720p/hd_stream.m3u8",
+        "480p": "http://192.168.1.50:8080/hls/480p/sd_stream.m3u8"
+      },
+      "api_endpoints": {
+        "stats": "http://192.168.1.50:8080/stat",
+        "control": "http://192.168.1.50:8080/control",
+        "health": "http://192.168.1.50:8080/health"
+      }
+    },
+    {
+      "id": "ubuntu_channel2",
+      "name": "Ubuntu Channel 2",
+      "host": "192.168.1.50", 
+      "rtmp_port": 1935,
+      "http_port": 8080,
+      "type": "nginx-rtmp",
+      "enabled": true,
+      "streams": [
+        {
+          "name": "channel2",
+          "app": "channel2",
+          "key": "stream2",
+          "quality": "720p",
+          "bitrate": "1000k"
+        }
+      ],
+      "hls_urls": {
+        "main": "http://192.168.1.50:8080/hls2/stream2.m3u8"
+      }
+    },
+    {
+      "id": "ubuntu_channel3",
+      "name": "Ubuntu Channel 3", 
+      "host": "192.168.1.50",
+      "rtmp_port": 1935,
+      "http_port": 8080,
+      "type": "nginx-rtmp",
+      "enabled": true,
+      "streams": [
+        {
+          "name": "channel3",
+          "app": "channel3", 
+          "key": "stream3",
+          "quality": "720p",
+          "bitrate": "1000k"
+        }
+      ],
+      "hls_urls": {
+        "main": "http://192.168.1.50:8080/hls3/stream3.m3u8"
+      }
+    }
+  ],
+  "default_settings": {
+    "connection_timeout": 30,
+    "retry_attempts": 3,
+    "retry_delay": 5,
+    "health_check_interval": 30,
+    "auto_reconnect": true
+  }
+}

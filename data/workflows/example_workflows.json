@@ -1,0 +1,24 @@
+{
+    "custom_workflows": [
+        {
+            "name": "morning_startup",
+            "description": "Өглөөний системийн эхлүүлэлт",
+            "steps": [
+                {"name": "system_check", "tab": "scheduler", "command": "health_check"},
+                {"name": "load_schedule", "tab": "scheduler", "command": "load_daily_schedule"},
+                {"name": "prepare_media", "tab": "media_library", "command": "scan_media"},
+                {"name": "test_streams", "tab": "streaming", "command": "test_connections"}
+            ]
+        },
+        {
+            "name": "evening_shutdown",
+            "description": "Оройн системийн хаалт",
+            "steps": [
+                {"name": "stop_automation", "tab": "scheduler", "command": "disable_automation"},
+                {"name": "stop_streams", "tab": "streaming", "command": "stop_all_streams"},
+                {"name": "backup_logs", "tab": "scheduler", "command": "backup_daily_logs"},
+                {"name": "cleanup", "tab": "media_library", "command": "cleanup_temp"}
+            ]
+        }
+    ]
+}

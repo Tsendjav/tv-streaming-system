@@ -1,0 +1,661 @@
+2025-06-d 22:45:34 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 22:45:34 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 22:45:34 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 22:45:34 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 22:45:34 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 22:45:34 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 22:45:34 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 22:45:35 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 22:45:35 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 22:45:35 [[32mINFO[0m] root: Created default configuration
+2025-06-d 22:45:35 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 22:45:35 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 22:45:35 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 22:45:35 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 22:45:35 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 22:45:35 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 22:46:09 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 22:46:09 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 22:46:09 [[32mINFO[0m] ui.main_window: Main window cleanup completed
+2025-06-d 22:46:09 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 22:46:09 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 22:46:09 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 23:43:37 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 23:43:37 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 23:43:37 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 23:43:37 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 23:43:37 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 23:43:37 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 23:43:37 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 23:43:42 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 23:43:42 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 23:43:42 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 23:43:42 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 23:43:47 [[32mINFO[0m] media.library: Loaded 0 media files into cache
+2025-06-d 23:43:47 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 23:43:47 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 23:43:47 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 23:43:47 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 23:43:47 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 23:43:47 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 23:44:11 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 23:44:11 [[32mINFO[0m] media.library: Scan completed. Added 0 files.
+2025-06-d 23:44:11 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 23:44:21 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:09:55 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 00:09:55 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 00:09:55 [[32mINFO[0m] ui.main_window: Main window cleanup completed
+2025-06-d 00:09:55 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 00:09:55 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 00:09:55 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 00:10:00 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 00:10:00 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 00:10:00 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 00:10:00 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 00:10:01 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 00:10:01 [[32mINFO[0m] media.library: Loaded 1 media files into cache
+2025-06-d 00:10:01 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 00:10:01 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:10:01 [[31mERROR[0m] ui.main_window: Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+2025-06-d 00:10:01 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 00:10:01 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 00:10:01 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 00:10:01 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 00:13:49 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:14:07 [[32mINFO[0m] ui.tabs.playout_tab: Loaded media: 10491606_303807539781340_698014598_n
+2025-06-d 00:14:22 [[32mINFO[0m] ui.tabs.playout_tab: Loaded media: 10491606_303807539781340_698014598_n
+2025-06-d 00:14:22 [[32mINFO[0m] ui.tabs.playout_tab: Media taken to program output
+2025-06-d 00:14:48 [[32mINFO[0m] ui.tabs.playout_tab: Loaded media: 10491606_303807539781340_698014598_n
+2025-06-d 00:14:48 [[32mINFO[0m] ui.tabs.playout_tab: Media cut to program output
+2025-06-d 00:14:59 [[32mINFO[0m] ui.tabs.playout_tab: Loaded media: 10491606_303807539781340_698014598_n
+2025-06-d 00:14:59 [[32mINFO[0m] ui.tabs.playout_tab: Media cut to program output
+2025-06-d 00:15:00 [[32mINFO[0m] ui.tabs.playout_tab: Loaded media: 10491606_303807539781340_698014598_n
+2025-06-d 00:15:00 [[32mINFO[0m] ui.tabs.playout_tab: Media taken to program output
+2025-06-d 00:16:13 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 00:16:13 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 00:16:13 [[32mINFO[0m] ui.main_window: Main window cleanup completed
+2025-06-d 00:16:13 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 00:16:13 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 00:16:13 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 00:35:37 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 00:35:37 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 00:35:37 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 00:35:37 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 00:35:38 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 00:35:38 [[32mINFO[0m] media.library: Loaded 4 media files into cache
+2025-06-d 00:35:38 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 00:35:38 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:35:38 [[31mERROR[0m] ui.main_window: Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+2025-06-d 00:35:38 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 00:35:38 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 00:35:38 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 00:35:38 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 00:35:54 [[32mINFO[0m] ui.tabs.playout_tab: Loaded media: A.Hosbayr -Saalichin busgui  А.Хосбаяр- Саальчин бүсгүй
+2025-06-d 00:35:58 [[32mINFO[0m] ui.tabs.playout_tab: Loaded media: A.Hosbayr -Saalichin busgui  А.Хосбаяр- Саальчин бүсгүй
+2025-06-d 00:35:58 [[32mINFO[0m] ui.tabs.playout_tab: Media taken to program output
+2025-06-d 00:36:31 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 00:36:31 [[32mINFO[0m] media.library: Scan completed. Added 0 files.
+2025-06-d 00:36:31 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:36:45 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:37:29 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:37:34 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 00:37:34 [[32mINFO[0m] media.library: Scan completed. Added 0 files.
+2025-06-d 00:37:34 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 00:38:07 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 00:38:07 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 00:38:07 [[32mINFO[0m] ui.main_window: Main window cleanup completed
+2025-06-d 00:38:07 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 00:38:07 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 00:38:07 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 10:52:52 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 10:52:52 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 10:52:52 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 10:52:52 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 10:52:52 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 10:52:52 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 10:52:52 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 10:52:59 [[33mWARNING[0m] __main__: FFmpeg not found - streaming will be disabled
+2025-06-d 10:52:59 [[33mWARNING[0m] __main__: Missing optional dependencies: ffmpeg
+2025-06-d 10:53:02 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 10:53:02 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 10:53:02 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 10:53:03 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 10:53:03 [[32mINFO[0m] media.library: Loaded 17 media files into cache
+2025-06-d 10:53:03 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 10:53:03 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 10:53:03 [[31mERROR[0m] ui.main_window: Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+2025-06-d 10:53:04 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 10:53:04 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 10:53:04 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 10:53:04 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 10:54:58 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 10:54:58 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 10:54:58 [[32mINFO[0m] ui.main_window: Main window cleanup completed
+2025-06-d 10:54:58 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 10:54:58 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 10:54:58 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 10:59:06 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 10:59:06 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 10:59:06 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 10:59:06 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 10:59:07 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 10:59:07 [[32mINFO[0m] media.library: Loaded 17 media files into cache
+2025-06-d 10:59:07 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 10:59:07 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 10:59:07 [[31mERROR[0m] ui.main_window: Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+2025-06-d 10:59:07 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 10:59:07 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 10:59:07 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 10:59:07 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 11:19:06 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 11:19:06 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 11:19:06 [[32mINFO[0m] ui.main_window: Main window cleanup completed
+2025-06-d 11:19:06 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 11:19:06 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 11:19:06 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 12:40:36 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 12:40:36 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 12:40:36 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 12:40:36 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 12:40:36 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 12:40:36 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 12:40:36 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 12:40:41 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 12:40:41 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 12:40:41 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 12:40:41 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 12:40:41 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 12:40:41 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized
+2025-06-d 12:40:45 [[32mINFO[0m] media.library: Loaded 17 media files into cache
+2025-06-d 12:40:45 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 12:40:45 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 12:40:45 [[35mCRITICAL[0m] __main__: Failed to start application: 'StreamingTab' object has no attribute '_on_server_changed'
+Traceback (most recent call last):
+  File "D:\streaming_studio\main.py", line 199, in main
+    main_window = MainWindow(config_manager)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\streaming_studio\ui\main_window.py", line 54, in __init__
+    self._init_tabs()
+  File "D:\streaming_studio\ui\main_window.py", line 103, in _init_tabs
+    self.streaming_tab = StreamingTab(self.config_manager)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\streaming_studio\ui\tabs\streaming_tab.py", line 261, in __init__
+    self._init_ui()
+  File "D:\streaming_studio\ui\tabs\streaming_tab.py", line 276, in _init_ui
+    config_panel = self._create_config_panel()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\streaming_studio\ui\tabs\streaming_tab.py", line 295, in _create_config_panel
+    self.server_combo.currentTextChanged.connect(self._on_server_changed)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StreamingTab' object has no attribute '_on_server_changed'
+2025-06-d 12:40:55 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 12:45:51 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 12:45:51 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 12:45:51 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 12:45:51 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 12:45:51 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 12:45:51 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized
+2025-06-d 12:45:52 [[32mINFO[0m] media.library: Loaded 17 media files into cache
+2025-06-d 12:45:52 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 12:45:52 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 12:45:52 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 12:45:52 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 12:45:52 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 12:45:52 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 12:46:06 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\main_window.py", line 503, in _open_server_config
+    self.server_config_dialog = ServerManagerDialog(self.config_manager, self)
+                                ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ServerManagerDialog' is not defined
+2025-06-d 12:46:13 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 12:46:13 [[32mINFO[0m] media.library: Scan completed. Added 0 files.
+2025-06-d 12:46:13 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 12:46:31 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 12:48:34 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 12:48:49 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 12:48:54 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 12:48:56 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 12:48:59 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 12:49:20 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 12:49:22 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\main_window.py", line 503, in _open_server_config
+    self.server_config_dialog = ServerManagerDialog(self.config_manager, self)
+                                ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ServerManagerDialog' is not defined
+2025-06-d 12:49:25 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\main_window.py", line 503, in _open_server_config
+    self.server_config_dialog = ServerManagerDialog(self.config_manager, self)
+                                ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ServerManagerDialog' is not defined
+2025-06-d 12:49:49 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 12:49:49 [[32mINFO[0m] media.library: Scan completed. Added 0 files.
+2025-06-d 12:49:49 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 12:50:12 [[32mINFO[0m] media.library: Cleaned up 0 missing files
+2025-06-d 12:50:12 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 12:50:16 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 12:50:16 [[32mINFO[0m] media.library: Scan completed. Added 0 files.
+2025-06-d 12:50:16 [[31mERROR[0m] ui.tabs.media_library_tab: Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+2025-06-d 13:00:07 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 13:00:07 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 13:00:07 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 13:00:07 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 13:00:07 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 13:00:07 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 13:11:03 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 13:11:03 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 13:11:03 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 13:11:03 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 13:11:03 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized
+2025-06-d 13:11:03 [[32mINFO[0m] ui.tabs.media_library_tab: Media scan completed. Found 0 new files.
+2025-06-d 13:11:03 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 13:11:03 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 13:11:24 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 13:11:27 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 13:11:36 [[32mINFO[0m] ui.tabs.media_library_tab: Media scan completed. Found 0 new files.
+2025-06-d 13:11:49 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 13:19:17 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 13:19:17 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 13:19:17 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 13:19:17 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 13:19:17 [[32mINFO[0m] __main__: Window geometry saved
+2025-06-d 13:19:17 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 13:19:17 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 13:39:09 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 13:39:09 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 13:39:09 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 13:39:09 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 13:39:09 [[35mCRITICAL[0m] __main__: Failed to create main window: 'PlayoutTab' object has no attribute '_preview_seek'
+2025-06-d 13:39:12 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 13:42:59 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 13:42:59 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 13:42:59 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 13:42:59 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 13:42:59 [[35mCRITICAL[0m] __main__: Failed to create main window: 'PlayoutTab' object has no attribute '_preview_seek'
+2025-06-d 13:43:48 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 13:47:28 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 13:47:28 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 13:47:28 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 13:47:28 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 13:47:28 [[35mCRITICAL[0m] __main__: Failed to create main window: argument 1 has unexpected type 'NoneType'
+2025-06-d 13:47:31 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 13:48:21 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 13:48:21 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 13:48:21 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 13:48:21 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 13:48:21 [[35mCRITICAL[0m] __main__: Failed to create main window: argument 1 has unexpected type 'NoneType'
+2025-06-d 13:49:18 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 13:54:57 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 13:54:57 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 13:54:57 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 13:54:57 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 13:54:57 [[33mWARNING[0m] ui.tabs.playout_tab: Failed to create preview transport: argument 1 has unexpected type 'NoneType'
+2025-06-d 13:54:58 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 13:54:58 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 13:54:58 [[32mINFO[0m] media.library: Loaded 21 media files into cache
+2025-06-d 13:54:58 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 13:54:58 [[35mCRITICAL[0m] __main__: Failed to create main window: 'MediaLibraryTab' object has no attribute 'scan_media_library'
+2025-06-d 13:55:28 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 14:11:26 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 14:11:26 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 14:11:26 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 14:11:26 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 14:11:26 [[33mWARNING[0m] ui.tabs.playout_tab: Failed to create preview transport: argument 1 has unexpected type 'NoneType'
+2025-06-d 14:11:27 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 14:11:27 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 14:11:27 [[32mINFO[0m] media.library: Loaded 21 media files into cache
+2025-06-d 14:11:27 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 14:11:27 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 14:11:27 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 14:11:27 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 14:11:27 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 14:11:43 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 14:11:46 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 14:11:46 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 550, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 765, in _open_file
+    if self.current_media_file and self.current_media_file.exists():
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 14:11:49 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 14:11:49 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 550, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 765, in _open_file
+    if self.current_media_file and self.current_media_file.exists():
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 14:11:53 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 14:11:53 [[32mINFO[0m] media.library: Scan completed. Added 0 files
+2025-06-d 16:08:45 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 16:08:48 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 16:08:48 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 550, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 765, in _open_file
+    if self.current_media_file and self.current_media_file.exists():
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 16:32:37 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 16:32:37 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 16:32:37 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 16:32:37 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 16:32:37 [[32mINFO[0m] __main__: Window geometry saved
+2025-06-d 16:32:37 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 16:32:37 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 16:32:56 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 16:32:56 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 16:32:56 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 16:32:56 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 16:32:56 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 16:32:56 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 16:32:56 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 16:32:57 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 16:32:57 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 16:32:57 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 16:32:57 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 16:32:57 [[33mWARNING[0m] ui.tabs.playout_tab: Failed to create preview transport: argument 1 has unexpected type 'NoneType'
+2025-06-d 16:32:58 [[32mINFO[0m] ui.tabs.playout_tab: VLC players initialized
+2025-06-d 16:32:58 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 16:32:58 [[32mINFO[0m] media.library: Loaded 21 media files into cache
+2025-06-d 16:32:58 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 16:32:58 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 16:32:58 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 16:32:58 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 16:32:58 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 16:33:04 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 16:33:04 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 16:33:17 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 16:33:23 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 16:33:23 [[32mINFO[0m] media.library: Scan completed. Added 0 files
+2025-06-d 17:22:02 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 17:22:02 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 17:22:02 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 17:22:02 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 17:22:02 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 17:22:02 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 17:22:02 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 17:22:08 [[33mWARNING[0m] __main__: FFmpeg not found - streaming will be disabled
+2025-06-d 17:22:08 [[33mWARNING[0m] __main__: Missing optional dependencies: ffmpeg
+2025-06-d 17:22:12 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 17:22:12 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 17:22:12 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 17:22:12 [[32mINFO[0m] ui.tabs.playout_tab: Media players initialized
+2025-06-d 17:22:12 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 17:22:13 [[32mINFO[0m] media.library: Loaded 21 media files into cache
+2025-06-d 17:22:13 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 17:22:13 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 17:22:13 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 17:22:13 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 17:22:13 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 17:22:34 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 17:22:34 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 17:22:34 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 17:22:34 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 17:22:34 [[32mINFO[0m] __main__: Window geometry saved
+2025-06-d 17:22:34 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 17:22:34 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 17:22:34 [[31mERROR[0m] ui.tabs.media_library_tab: Error during cleanup: exception: access violation reading 0x00000168D338E130
+2025-06-d 17:30:24 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 17:30:24 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 17:30:24 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 17:30:24 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 17:30:25 [[32mINFO[0m] ui.tabs.playout_tab: Media players initialized
+2025-06-d 17:30:25 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 17:30:25 [[32mINFO[0m] media.library: Loaded 21 media files into cache
+2025-06-d 17:30:25 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 17:30:25 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 17:30:25 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 17:30:25 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 17:30:25 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 17:30:28 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 17:30:48 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 17:30:48 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 17:30:53 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 17:30:56 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 17:30:58 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 17:30:58 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 17:31:00 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 17:31:00 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 17:31:02 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 17:31:02 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 17:31:13 [[31mERROR[0m] ui.tabs.media_library_tab: Error applying filters: 'MediaLibrary' object has no attribute '_media_matches_search_criteria'
+2025-06-d 17:31:14 [[31mERROR[0m] ui.tabs.media_library_tab: Error applying filters: 'MediaLibrary' object has no attribute '_media_matches_search_criteria'
+2025-06-d 17:31:34 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 17:31:48 [[31mERROR[0m] ui.tabs.media_library_tab: Error updating metadata panel: 'bool' object is not callable
+2025-06-d 17:31:49 [[35mCRITICAL[0m] __main__: Uncaught exception
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-d 18:28:11 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 18:28:11 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 18:28:11 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 18:28:11 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 18:28:11 [[32mINFO[0m] __main__: Window geometry saved
+2025-06-d 18:28:11 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 18:28:11 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 18:28:11 [[31mERROR[0m] ui.tabs.media_library_tab: Error during cleanup: exception: access violation reading 0x00000146C7029070
+2025-06-d 19:01:40 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 19:01:40 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 19:01:40 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 19:01:40 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 19:01:41 [[32mINFO[0m] ui.tabs.playout_tab: Media players initialized
+2025-06-d 19:01:41 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 19:01:41 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 19:01:41 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 19:01:41 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 19:01:41 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 19:02:10 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 19:02:10 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 19:02:10 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 19:02:10 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 19:02:10 [[32mINFO[0m] __main__: Window geometry saved
+2025-06-d 19:02:10 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 19:02:10 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 19:02:14 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 19:02:14 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 19:02:14 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 19:02:14 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 19:02:15 [[32mINFO[0m] ui.tabs.playout_tab: Media players initialized
+2025-06-d 19:02:15 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 19:02:15 [[32mINFO[0m] media.library: Loaded 21 media files into cache
+2025-06-d 19:02:15 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 19:02:15 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 19:02:15 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 19:02:15 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 19:02:15 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 19:02:25 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 19:02:27 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 19:15:05 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 19:15:44 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 19:15:44 [[32mINFO[0m] media.library: Scan completed. Added 0 files
+2025-06-d 19:16:52 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 19:16:52 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 19:16:52 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 19:16:52 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 19:16:52 [[32mINFO[0m] __main__: Window geometry saved
+2025-06-d 19:16:52 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 19:16:52 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 19:16:52 [[31mERROR[0m] ui.tabs.media_library_tab: Error during cleanup: exception: access violation writing 0x0000000000000024
+2025-06-d 19:56:49 [[32mINFO[0m] root: StreamingStudio logging initialized at level INFO
+2025-06-d 19:56:49 [[32mINFO[0m] root: Log directory: D:\streaming_studio\data\logs
+2025-06-d 19:56:49 [[32mINFO[0m] __main__: Starting Professional Streaming Studio v1.0.0
+2025-06-d 19:56:49 [[32mINFO[0m] __main__: Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+2025-06-d 19:56:49 [[32mINFO[0m] __main__: Working directory: D:\streaming_studio
+2025-06-d 19:56:49 [[32mINFO[0m] __main__: Qt Application initialized
+2025-06-d 19:56:49 [[32mINFO[0m] __main__: VLC Python bindings found
+2025-06-d 19:56:50 [[32mINFO[0m] __main__: FFmpeg found
+2025-06-d 19:56:50 [[32mINFO[0m] root: Configuration loaded from config.ini
+2025-06-d 19:56:50 [[32mINFO[0m] __main__: Configuration loaded
+2025-06-d 19:56:50 [[32mINFO[0m] __main__: Creating main window...
+2025-06-d 19:56:50 [[32mINFO[0m] ui.tabs.playout_tab: Media players initialized
+2025-06-d 19:56:50 [[32mINFO[0m] ui.tabs.playout_tab: Enhanced playout tab initialized successfully
+2025-06-d 19:56:51 [[32mINFO[0m] media.library: Loaded 21 media files into cache
+2025-06-d 19:56:51 [[32mINFO[0m] media.library: Media library initialized: data\media
+2025-06-d 19:56:51 [[32mINFO[0m] ui.main_window: Main window initialized
+2025-06-d 19:56:51 [[32mINFO[0m] __main__: Main window displayed
+2025-06-d 19:56:51 [[32mINFO[0m] __main__: Periodic tasks setup completed
+2025-06-d 19:56:51 [[32mINFO[0m] __main__: Professional Streaming Studio startup completed successfully
+2025-06-d 19:57:16 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 19:59:03 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 19:59:03 [[32mINFO[0m] media.library: Scan completed. Added 0 files
+2025-06-d 19:59:19 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 19:59:31 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 19:59:34 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 19:59:35 [[31mERROR[0m] ui.tabs.playout_tab: VLC play() failed
+2025-06-d 20:14:10 [[32mINFO[0m] media.library: Starting media scan: data\media
+2025-06-d 20:14:10 [[32mINFO[0m] media.library: Scan completed. Added 0 files
+2025-06-d 20:42:13 [[32mINFO[0m] ui.tabs.playout_tab: Playout tab cleanup completed
+2025-06-d 20:42:13 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 20:42:13 [[32mINFO[0m] ui.main_window: Main window closing
+2025-06-d 20:42:13 [[32mINFO[0m] root: Configuration saved to config.ini
+2025-06-d 20:42:13 [[32mINFO[0m] __main__: Window geometry saved
+2025-06-d 20:42:13 [[32mINFO[0m] __main__: Professional Streaming Studio shutting down with exit code: 0
+2025-06-d 20:42:13 [[32mINFO[0m] root: StreamingStudio logging system shutting down
+2025-06-d 20:42:14 [[31mERROR[0m] ui.tabs.ajilladag_ashiglaj_bolno_media_library_tab: Error during cleanup: exception: access violation writing 0x0000000000000024

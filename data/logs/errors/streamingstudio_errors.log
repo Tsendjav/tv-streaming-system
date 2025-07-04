@@ -1,0 +1,496 @@
+2025-06-22 23:43:47 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 9124
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-22 23:44:11 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 9124
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-22 23:44:21 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 9124
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 00:10:01 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 19452
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 00:10:01 [[31mERROR[0m] ui.main_window (main_window.py:246): Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+Function: _create_tab_widget
+Thread: 19452
+D:\streaming_studio\ui\main_window.py
+--------------------------------------------------------------------------------
+2025-06-23 00:13:49 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 19452
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 00:35:38 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 3856
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 00:35:38 [[31mERROR[0m] ui.main_window (main_window.py:246): Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+Function: _create_tab_widget
+Thread: 3856
+D:\streaming_studio\ui\main_window.py
+--------------------------------------------------------------------------------
+2025-06-23 00:36:31 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 3856
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 00:36:45 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 3856
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 00:37:29 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 3856
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 00:37:34 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 3856
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 10:53:03 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14536
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 10:53:03 [[31mERROR[0m] ui.main_window (main_window.py:246): Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+Function: _create_tab_widget
+Thread: 14536
+D:\streaming_studio\ui\main_window.py
+--------------------------------------------------------------------------------
+2025-06-23 10:59:07 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 15036
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 10:59:07 [[31mERROR[0m] ui.main_window (main_window.py:246): Error creating tabs: 'StreamingTab' object has no attribute '_on_server_changed'
+Function: _create_tab_widget
+Thread: 15036
+D:\streaming_studio\ui\main_window.py
+--------------------------------------------------------------------------------
+2025-06-23 12:40:45 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 12696
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:40:45 [[35mCRITICAL[0m] __main__ (main.py:229): Failed to start application: 'StreamingTab' object has no attribute '_on_server_changed'
+Function: main
+Thread: 12696
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\main.py", line 199, in main
+    main_window = MainWindow(config_manager)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\streaming_studio\ui\main_window.py", line 54, in __init__
+    self._init_tabs()
+  File "D:\streaming_studio\ui\main_window.py", line 103, in _init_tabs
+    self.streaming_tab = StreamingTab(self.config_manager)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\streaming_studio\ui\tabs\streaming_tab.py", line 261, in __init__
+    self._init_ui()
+  File "D:\streaming_studio\ui\tabs\streaming_tab.py", line 276, in _init_ui
+    config_panel = self._create_config_panel()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\streaming_studio\ui\tabs\streaming_tab.py", line 295, in _create_config_panel
+    self.server_combo.currentTextChanged.connect(self._on_server_changed)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StreamingTab' object has no attribute '_on_server_changed'
+2025-06-23 12:45:52 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14760
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:46:06 [[35mCRITICAL[0m] __main__ (main.py:81): Uncaught exception
+Function: handle_exception
+Thread: 14760
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\main_window.py", line 503, in _open_server_config
+    self.server_config_dialog = ServerManagerDialog(self.config_manager, self)
+                                ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ServerManagerDialog' is not defined
+2025-06-23 12:46:13 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14760
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:46:31 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14760
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:48:34 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 14760
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:48:49 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14760
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:48:54 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 14760
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:48:56 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 14760
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:48:59 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 14760
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:49:20 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 14760
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:49:22 [[35mCRITICAL[0m] __main__ (main.py:81): Uncaught exception
+Function: handle_exception
+Thread: 14760
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\main_window.py", line 503, in _open_server_config
+    self.server_config_dialog = ServerManagerDialog(self.config_manager, self)
+                                ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ServerManagerDialog' is not defined
+2025-06-23 12:49:25 [[35mCRITICAL[0m] __main__ (main.py:81): Uncaught exception
+Function: handle_exception
+Thread: 14760
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\main_window.py", line 503, in _open_server_config
+    self.server_config_dialog = ServerManagerDialog(self.config_manager, self)
+                                ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ServerManagerDialog' is not defined
+2025-06-23 12:49:49 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14760
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:50:12 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14760
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 12:50:16 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:478): Failed to load media data: 'MediaLibrary' object has no attribute 'media_files'
+Function: _load_media_data
+Thread: 14760
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 13:11:24 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 8984
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 13:11:27 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 8984
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 13:11:49 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:123): VLC play() failed
+Function: play
+Thread: 8984
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 13:39:09 [[35mCRITICAL[0m] __main__ (main.py:320): Failed to create main window: 'PlayoutTab' object has no attribute '_preview_seek'
+Function: main
+Thread: 5188
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+2025-06-23 13:42:59 [[35mCRITICAL[0m] __main__ (main.py:320): Failed to create main window: 'PlayoutTab' object has no attribute '_preview_seek'
+Function: main
+Thread: 15072
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+2025-06-23 13:47:28 [[35mCRITICAL[0m] __main__ (main.py:320): Failed to create main window: argument 1 has unexpected type 'NoneType'
+Function: main
+Thread: 15832
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+2025-06-23 13:48:21 [[35mCRITICAL[0m] __main__ (main.py:320): Failed to create main window: argument 1 has unexpected type 'NoneType'
+Function: main
+Thread: 13868
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+2025-06-23 13:54:58 [[35mCRITICAL[0m] __main__ (main.py:320): Failed to create main window: 'MediaLibraryTab' object has no attribute 'scan_media_library'
+Function: main
+Thread: 1964
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+2025-06-23 14:11:43 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:1178): VLC play() failed
+Function: _handle_player_error
+Thread: 16224
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 14:11:46 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:593): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 16224
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 14:11:46 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 16224
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 550, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 765, in _open_file
+    if self.current_media_file and self.current_media_file.exists():
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 14:11:49 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:593): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 16224
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 14:11:49 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 16224
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 550, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 765, in _open_file
+    if self.current_media_file and self.current_media_file.exists():
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 16:08:45 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:593): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 16224
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 16:08:48 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:593): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 16224
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 16:08:48 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 16224
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 550, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 765, in _open_file
+    if self.current_media_file and self.current_media_file.exists():
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 16:33:04 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 5888
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 16:33:04 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 5888
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 16:33:17 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 5888
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:22:34 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:1394): Error during cleanup: exception: access violation reading 0x00000168D338E130
+Function: cleanup
+Thread: 8268
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:30:28 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 1228
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:30:48 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:30:48 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 1228
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 17:30:53 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 1228
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:30:56 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 1228
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:30:58 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:30:58 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 1228
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 17:31:00 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:31:00 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 1228
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 17:31:02 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:31:02 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 1228
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 17:31:13 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:693): Error applying filters: 'MediaLibrary' object has no attribute '_media_matches_search_criteria'
+Function: _apply_filters
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:31:14 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:693): Error applying filters: 'MediaLibrary' object has no attribute '_media_matches_search_criteria'
+Function: _apply_filters
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:31:34 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:31:48 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:809): Error updating metadata panel: 'bool' object is not callable
+Function: _update_metadata_panel
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 17:31:49 [[35mCRITICAL[0m] __main__ (main.py:167): Uncaught exception
+Function: handle_exception
+Thread: 1228
+D:\streaming_studio\main.py
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 740, in _on_media_double_clicked
+    self._open_file()
+  File "D:\streaming_studio\ui\tabs\media_library_tab.py", line 1051, in _open_file
+    if not self.current_media_file or not self.current_media_file.exists():
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-06-23 18:28:11 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:1394): Error during cleanup: exception: access violation reading 0x00000146C7029070
+Function: cleanup
+Thread: 1228
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:02:25 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 4088
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:02:27 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 4088
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:15:05 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 4088
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:16:52 [[31mERROR[0m] ui.tabs.media_library_tab (media_library_tab.py:1394): Error during cleanup: exception: access violation writing 0x0000000000000024
+Function: cleanup
+Thread: 4088
+D:\streaming_studio\ui\tabs\media_library_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:57:16 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 10292
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:59:19 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 10292
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:59:31 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 10292
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:59:34 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 10292
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 19:59:35 [[31mERROR[0m] ui.tabs.playout_tab (playout_tab.py:592): VLC play() failed
+Function: _handle_player_error
+Thread: 10292
+D:\streaming_studio\ui\tabs\playout_tab.py
+--------------------------------------------------------------------------------
+2025-06-23 20:42:14 [[31mERROR[0m] ui.tabs.ajilladag_ashiglaj_bolno_media_library_tab (ajilladag_ashiglaj_bolno_media_library_tab.py:1394): Error during cleanup: exception: access violation writing 0x0000000000000024
+Function: cleanup
+Thread: 10292
+D:\streaming_studio\ui\tabs\ajilladag_ashiglaj_bolno_media_library_tab.py
+--------------------------------------------------------------------------------

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-06-29T15:41:42.623352",
+  "server": "192.168.1.50",
+  "results": {
+    "ping": true,
+    "rtmp_port": true,
+    "http_port": true,
+    "nginx_status": true,
+    "health": true,
+    "hls_dirs": true
+  },
+  "summary": "6/6"
+}

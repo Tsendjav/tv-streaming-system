@@ -1,0 +1,50 @@
+﻿{
+  "ffmpeg_profiles": {
+    "ubuntu_1080p": {
+      "name": "Ubuntu 1080p Stream",
+      "video_codec": "libx264",
+      "audio_codec": "aac", 
+      "video_bitrate": "2500k",
+      "audio_bitrate": "128k",
+      "resolution": "1920x1080",
+      "fps": 30,
+      "keyframe_interval": 2,
+      "preset": "fast",
+      "tune": "zerolatency",
+      "rtmp_url": "rtmp://192.168.1.50:1935/live/main_stream"
+    },
+    "ubuntu_720p": {
+      "name": "Ubuntu 720p Stream",
+      "video_codec": "libx264",
+      "audio_codec": "aac",
+      "video_bitrate": "1200k", 
+      "audio_bitrate": "128k",
+      "resolution": "1280x720",
+      "fps": 30,
+      "keyframe_interval": 2,
+      "preset": "fast",
+      "tune": "zerolatency",
+      "rtmp_url": "rtmp://192.168.1.50:1935/live_720p/hd_stream"
+    },
+    "ubuntu_480p": {
+      "name": "Ubuntu 480p Stream",
+      "video_codec": "libx264",
+      "audio_codec": "aac",
+      "video_bitrate": "600k",
+      "audio_bitrate": "96k", 
+      "resolution": "854x480",
+      "fps": 30,
+      "keyframe_interval": 2,
+      "preset": "faster",
+      "tune": "zerolatency",
+      "rtmp_url": "rtmp://192.168.1.50:1935/live_480p/sd_stream"
+    }
+  },
+  "playback_urls": {
+    "main_hls": "http://192.168.1.50:8080/hls/main_stream.m3u8",
+    "720p_hls": "http://192.168.1.50:8080/hls/720p/hd_stream.m3u8", 
+    "480p_hls": "http://192.168.1.50:8080/hls/480p/sd_stream.m3u8",
+    "channel2_hls": "http://192.168.1.50:8080/hls2/stream2.m3u8",
+    "channel3_hls": "http://192.168.1.50:8080/hls3/stream3.m3u8"
+  }
+}

@@ -1,0 +1,167 @@
+{
+    "profiles": [
+        {
+            "name": "default",
+            "description": "General purpose audio profile.",
+            "plugins": [
+                {
+                    "uri": "http://ardour.org/lv2/ardour_eq",
+                    "enabled": true,
+                    "parameters": {
+                        "low_gain": 0.0,
+                        "mid_gain": 0.0,
+                        "high_gain": 0.0,
+                        "freq1": 1000.0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "movie_mode",
+            "description": "Optimized for movie watching with clear dialogue and cinematic bass.",
+            "plugins": [
+                {
+                    "uri": "urn:lv2:voice_clarity",
+                    "enabled": true,
+                    "parameters": {
+                        "enhancement": 0.4
+                    }
+                },
+                {
+                    "uri": "urn:lv2:bass_boost",
+                    "enabled": true,
+                    "parameters": {
+                        "boost": 3.0
+                    }
+                },
+                {
+                    "uri": "http://ardour.org/lv2/ardour_compressor",
+                    "enabled": true,
+                    "parameters": {
+                        "threshold": -15.0,
+                        "ratio": 2.5,
+                        "attack": 0.05,
+                        "release": 0.2
+                    }
+                },
+                {
+                    "uri": "http://ardour.org/lv2/ardour_eq",
+                    "enabled": true,
+                    "parameters": {
+                        "low_gain": 1.0,
+                        "mid_gain": 0.5,
+                        "high_gain": 0.0,
+                        "freq1": 1000.0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "music_mode",
+            "description": "Designed for music listening with balanced sound.",
+            "plugins": [
+                {
+                    "uri": "http://ardour.org/lv2/ardour_eq",
+                    "enabled": true,
+                    "parameters": {
+                        "low_gain": 2.0,
+                        "mid_gain": 0.0,
+                        "high_gain": 1.0,
+                        "freq1": 1000.0
+                    }
+                },
+                {
+                    "uri": "urn:lv2:voice_clarity",
+                    "enabled": false
+                },
+                {
+                    "uri": "urn:lv2:bass_boost",
+                    "enabled": false
+                }
+            ]
+        },
+        {
+            "name": "news_mode",
+            "description": "Focuses on vocal clarity for news and talk shows.",
+            "plugins": [
+                {
+                    "uri": "urn:lv2:voice_clarity",
+                    "enabled": true,
+                    "parameters": {
+                        "enhancement": 0.8
+                    }
+                },
+                {
+                    "uri": "http://ardour.org/lv2/ardour_eq",
+                    "enabled": true,
+                    "parameters": {
+                        "low_gain": -3.0,
+                        "mid_gain": 2.0,
+                        "high_gain": 0.0,
+                        "freq1": 1000.0
+                    }
+                },
+                {
+                    "uri": "urn:lv2:bass_boost",
+                    "enabled": false
+                }
+            ]
+        },
+        {
+            "name": "sports_mode",
+            "description": "Enhanced atmosphere for sports broadcasts.",
+            "plugins": [
+                {
+                    "uri": "urn:lv2:voice_clarity",
+                    "enabled": true,
+                    "parameters": {
+                        "enhancement": 0.2
+                    }
+                },
+                {
+                    "uri": "http://ardour.org/lv2/ardour_eq",
+                    "enabled": true,
+                    "parameters": {
+                        "low_gain": 3.0,
+                        "mid_gain": 1.0,
+                        "high_gain": 2.0,
+                        "freq1": 1000.0
+                    }
+                },
+                {
+                    "uri": "http://ardour.org/lv2/ardour_compressor",
+                    "enabled": true,
+                    "parameters": {
+                        "threshold": -10.0,
+                        "ratio": 1.5,
+                        "attack": 0.01,
+                        "release": 0.1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "night_mode_profile",
+            "description": "Reduces loud sounds for late-night viewing.",
+            "plugins": [
+                {
+                    "uri": "urn:lv2:night_mode",
+                    "enabled": true,
+                    "parameters": {
+                        "reduction": 0.6
+                    }
+                },
+                {
+                    "uri": "http://ardour.org/lv2/ardour_compressor",
+                    "enabled": true,
+                    "parameters": {
+                        "threshold": -20.0,
+                        "ratio": 5.0,
+                        "attack": 0.1,
+                        "release": 0.5
+                    }
+                }
+            ]
+        }
+    ]
+}

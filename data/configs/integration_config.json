@@ -1,0 +1,50 @@
+{
+    "monitoring_enabled": true,
+    "monitoring_interval": 5000,
+    "automation_enabled": true,
+    "emergency_auto_recovery": true,
+    "event_history_limit": 1000,
+    "performance_history_limit": 1000,
+    "alert_thresholds": {
+        "audio_level_low": -40.0,
+        "memory_usage_high": 85.0,
+        "cpu_usage_high": 80.0,
+        "network_latency_high": 500.0,
+        "stream_bitrate_drop": 0.8,
+        "dropped_frames_high": 5.0,
+        "disk_space_low": 90.0,
+        "stream_disconnect": 1,
+        "playout_stopped": 1
+    },
+    "workflow_timeout_default": 30,
+    "workflow_retry_attempts": 3,
+    "workflow_retry_delay": 5000,
+    "language": "mongolian",
+    "use_localized_messages": true,
+    "tab_settings": {
+        "media_library": {
+            "auto_scan_enabled": true,
+            "scan_interval": 300000,
+            "supported_formats": [".mp4", ".avi", ".mov", ".mkv", ".wmv"],
+            "thumbnail_generation": true
+        },
+        "playout": {
+            "auto_cue_enabled": true,
+            "fade_duration": 1.0,
+            "preview_auto_load": true,
+            "audio_monitoring": true
+        },
+        "streaming": {
+            "auto_start_on_take": false,
+            "quality_adaptation": true,
+            "backup_streams": true,
+            "stream_health_check": true
+        },
+        "scheduler": {
+            "automation_enabled": true,
+            "look_ahead_time": 300,
+            "auto_execute": true,
+            "conflict_resolution": "warn"
+        }
+    }
+}

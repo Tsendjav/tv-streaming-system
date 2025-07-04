@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "exported_at": "2025-06-30T20:54:05.290049",
+  "total_servers": 4,
+  "servers": {
+    "local": {
+      "name": "Local_NGINX_RTMP",
+      "host": "192.168.1.50",
+      "port": 8080,
+      "rtmp_port": 1935,
+      "ssl_enabled": false,
+      "api_endpoint": "/api/v1",
+      "stream_endpoint": "/live",
+      "username": null,
+      "password": null,
+      "max_streams": 10,
+      "description": "Үндсэн орон нутгийн RTMP сервер"
+    },
+    "youtube": {
+      "name": "YouTube Live",
+      "host": "a.rtmp.youtube.com",
+      "port": 443,
+      "rtmp_port": 1935,
+      "ssl_enabled": true,
+      "api_endpoint": "/api/v1",
+      "stream_endpoint": "/live2",
+      "username": null,
+      "password": null,
+      "max_streams": 10,
+      "description": "YouTube Live дамжуулалт"
+    },
+    "twitch": {
+      "name": "Twitch",
+      "host": "live.twitch.tv",
+      "port": 443,
+      "rtmp_port": 1935,
+      "ssl_enabled": true,
+      "api_endpoint": "/api/v1",
+      "stream_endpoint": "/live",
+      "username": null,
+      "password": null,
+      "max_streams": 10,
+      "description": "Twitch дамжуулалт"
+    },
+    "server_4": {
+      "name": "tv-server",
+      "host": "192.168.1.50",
+      "port": 8080,
+      "rtmp_port": 1935,
+      "ssl_enabled": false,
+      "api_endpoint": "/api/v1",
+      "stream_endpoint": "/live",
+      "username": null,
+      "password": null,
+      "max_streams": 10,
+      "description": ""
+    }
+  }
+}

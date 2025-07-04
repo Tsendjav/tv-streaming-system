@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "servers": {
+    "localhost": {
+      "name": "Localhost RTMP",
+      "host": "localhost",
+      "port": 8080,
+      "rtmp_port": 1935,
+      "ssl_enabled": false,
+      "description": "Local development server"
+    }
+  }
+}
